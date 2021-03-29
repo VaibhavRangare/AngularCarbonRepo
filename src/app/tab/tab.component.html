@@ -1,0 +1,33 @@
+<section class="overview-page__banner" aria-label="overview page banner">
+    <ibm-tab-header-group
+			[type]="type"
+			[followFocus]="followFocus"
+			[cacheActive]="cacheActive"
+			[isNavigation]="isNavigation">
+			<ibm-tab-header [paneReference]="content1">
+				Content 1
+			</ibm-tab-header>
+			<ibm-tab-header [paneReference]="content2">
+				Content 2
+			</ibm-tab-header>
+			<ibm-tab-header [paneReference]="content3" disabled="true">
+				Content 3
+			</ibm-tab-header>
+			<ibm-tab-header [paneReference]="content4">
+				Content 4
+			</ibm-tab-header>
+		</ibm-tab-header-group>
+
+		<ibm-tab #content1>
+			Tab Content 1
+		</ibm-tab>
+		<ibm-tab #content2>
+			Tab Content 2
+		</ibm-tab>
+		<ibm-tab #content3>
+			Tab Content 3
+		</ibm-tab>
+		<ibm-tab #content4>
+			Tab Content 4
+		</ibm-tab>
+</section>

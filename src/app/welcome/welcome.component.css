@@ -1,0 +1,43 @@
+.overview-page__banner {
+    height: 100vh;
+    background: #5596e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner__background {
+    position: fixed;
+}
+.banner__title {
+    font-size: 3.3vw;
+    margin-top: 8vw;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+.banner__subtitle {
+    font-size: 1.8vw;
+    color: #fff;
+    z-index: 2
+}
+.banner__links {
+    margin-top: 20px;
+    display: flex;
+}
+.banner__netlify {
+    position: relative;
+    z-index: 1;
+}
+.banner__logo--bold, .banner__logo span {
+    font-weight: 600;
+}
+@media screen and (min-width: 1515px) {
+    .banner__title {
+       font-size: 50px;
+    }
+    .banner__subtitle {
+        font-size: 28px;
+    }
+}

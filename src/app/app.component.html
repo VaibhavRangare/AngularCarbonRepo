@@ -1,0 +1,59 @@
+
+
+
+<ibm-header name="[Platform]">
+    <ibm-hamburger *ngIf="hasHamburger" [active]="active" (selected)="active = !active" (click)="dispNav()"></ibm-hamburger>
+    <ibm-header-navigation>
+        <ibm-header-item [route]="['welcome']">Home</ibm-header-item>
+        <ibm-header-item>Docs</ibm-header-item>
+        <ibm-header-item>Support</ibm-header-item>
+        <ibm-header-menu title="Manage">
+            <ibm-header-item>Link 1</ibm-header-item>
+            <ibm-header-item>Link 2</ibm-header-item>
+            <ibm-header-item>Link 3</ibm-header-item>
+        </ibm-header-menu>
+        <ibm-header-item [route]="['button']">Button</ibm-header-item>
+        <ibm-header-item [route]="['tab']">Tab</ibm-header-item>
+        
+    </ibm-header-navigation>
+    <ibm-header-global>
+        <ibm-header-action #firstAction title="action">
+            <svg icon ibmIconFade size="20" ></svg>
+        </ibm-header-action>
+        <ibm-header-action [(active)]="secondAction" title="action">
+            <svg icon ibmIconFade size="20" ></svg>
+        </ibm-header-action>
+    </ibm-header-global>
+</ibm-header>
+<ibm-sidenav [expanded]="active" [style.display]="sideNavDisp" >
+    <ibm-sidenav-item [route]="['welcome']">
+        <svg icon ibmIconFade size="16"></svg>
+        Home
+    </ibm-sidenav-item>
+    <ibm-sidenav-item>
+        <svg icon ibmIconFade size="16"></svg>
+        Link
+    </ibm-sidenav-item>
+    <ibm-sidenav-menu title="Category title">
+        <svg icon ibmIconFade size="16"></svg>
+        <ibm-sidenav-item>Link</ibm-sidenav-item>
+        <ibm-sidenav-item [active]="false">Link</ibm-sidenav-item>
+        <ibm-sidenav-item>Link</ibm-sidenav-item>
+    </ibm-sidenav-menu>
+</ibm-sidenav>
+<ibm-panel [expanded]="firstAction.active"></ibm-panel>
+<ibm-panel [expanded]="secondAction">
+    <ibm-switcher-list>
+        <ibm-switcher-list-item active="true">Switcher item one</ibm-switcher-list-item>
+        <ibm-switcher-list-item>Switcher item two</ibm-switcher-list-item>
+        <ibm-switcher-list-item>Switcher item three</ibm-switcher-list-item>
+        <ibm-switcher-list-item>Switcher item four</ibm-switcher-list-item>
+    </ibm-switcher-list>
+</ibm-panel>
+
+
+<button ibmButton="danger" >Button</button>
+<Button>Button</Button>
+
+
+<router-outlet></router-outlet>
